@@ -32,9 +32,15 @@ if 'autoreload' not in ipython.extension_manager.loaded:
 # Visualizations
 import matplotlib.pyplot as plt
 import seaborn as sns
-init_notebook_mode(connected=True)
 
-cf.set_config_file(theme='white')`)
+# generate plots inline
+%matplotlib inline
+
+# plotting params
+plt.style.use('bmh')
+plt.rcParams['figure.figsize'] = (10, 6)
+title_config = {'fontsize': 15, 'y': 1.03}
+`)
     Jupyter.notebook.insert_cell_at_index('markdown', 3)
       .set_text(`# Analysis/Modeling
 Do work here`)
